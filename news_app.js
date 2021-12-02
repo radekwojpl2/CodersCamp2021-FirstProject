@@ -23,10 +23,11 @@ const getData = async () => {
 // RUNTIME
 getData()
     .then(data => {
-        console.log(data);
-        // TODO: NEEDED DATA OBJECTS: author, content -short, description -long, published -date, source{name}, title, url, urlToImage 
+        // console.log(data);
         
         // ! MULTIPLE ARTICLES LOOP
+        // TODO: FIX DATE FORMATTING
+        // TODO: CHECK FOR AUTHOR
         const newsArticles = data.articles;
 
         newsArticles.forEach(article => {
@@ -35,6 +36,7 @@ getData()
             const newsDiv = document.createElement('div');
             // ADD IMAGE
             const newsPic = document.createElement('img');
+            newsPic.setAttribute('width','400px')
             newsPic.src = urlToImage
             newsDiv.appendChild(newsPic);
             // ADD TITLE HEADER
@@ -42,9 +44,11 @@ getData()
             newsHead.innerText = title;
             newsDiv.appendChild(newsHead);
             // ADD AUTHOR
-            const newsAuthor = document.createElement('h4');
-            newsAuthor.innerText = author;
-            newsDiv.appendChild(newsAuthor);
+            if (author) {
+                const newsAuthor = document.createElement('h4');
+                newsAuthor.innerText = author;
+                newsDiv.appendChild(newsAuthor);
+            }
             // ADD PUBLISHED DATE
             const newsPublished = document.createElement('h5');
             newsPublished.innerText = published;
