@@ -1,6 +1,7 @@
 // target output
-const news = document.querySelector('.news');
+const news = document.querySelector('.news-list');
 
+// GENERATE NEWS FEED
 
 export const makeFeed = array => {
     array.forEach(item => {
@@ -41,7 +42,17 @@ export const makeFeed = array => {
     })
 };
 
+    // CLEAR NEWS FEED
+            
+    
 
+export const removeAllNews = () => { 
+    const newsList = document.querySelector('.news-list');
+    console.log(newsList);
+    while (newsList.firstChild) {
+        newsList.firstChild.remove();
+    }
+};
 
 
 
