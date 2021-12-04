@@ -1,5 +1,6 @@
-import { makeFeed } from './src/create_feed';
-// const { doc } = require("prettier");
+// import { format } from "prettier";
+
+import { makeFeed } from './create_feed.js';
 
 // FETCH VARIABLES
 let topic = '+wine';
@@ -7,13 +8,9 @@ const source = `https://newsapi.org/v2/everything?q=${topic}&sortBy=popularity&p
 
 // DOM VARIABLES
 const body = document.body;
-const news = document.querySelector('.news')
-const newsOptions = document.querySelector('.news-options');
+const newsList = document.querySelector('.news'); //needs fixed
 
 
-
-// EVENT LISTENERS
-// TODO: Configure function for event listener
 
 
 // ! FUNCTIONS
@@ -28,51 +25,22 @@ const getData = async () => {
     return data;
 };
 
-// clear news feed
-const clearNews = () => {
-    let currentNewsDivs = document.querySelectorAll['.news-item'];
-    console.log(currentNewsDivs)
-    if(currentNewsDivs) {
-        currentNewsDivs.forEach(news => {
-            news.remove();
-        })
-    }    
+// purge news feed // not working 
+const removeAllNews = newsList => {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 };
 
 
 // ! RUNTIME
-topic = '+wine';
 
 getData()
     .then(data => {
-        // TODO: FIX DATE FORMATTING / UNDEFINED
         const newsArticles = data.articles;
-        makeFeed(newsArticles)
+        makeFeed(newsArticles);
     })
     .catch(err => console.log('runtime error', err.message));
 
 
-newsOptions.addEventListener('click', event => {
-    // console.log(event.target)
-    switch (event.target.value) {
-        case '+food':
-            console.log('food selected');
-            topic = event.target.value;
-            clearNews();
-            makeNewsFeed();
-            break;
-        case '+wine':
-            console.log('wine selected');
-            topic = event.target.value;
-            clearNews();
-            makeNewsFeed();
-            break;
-        case '+restuarants':
-            console.log('restaurant selected');
-            topic = event.target.value;
-            clearNews();
-            makeNewsFeed();
-            break;
-        
-    }
-})
+removeAllNews();

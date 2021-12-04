@@ -1,3 +1,6 @@
+// target output
+const news = document.querySelector('.news');
+
 
 export const makeFeed = array => {
     array.forEach(item => {
@@ -37,6 +40,8 @@ export const makeFeed = array => {
         news.appendChild(newsDiv);
     })
 };
+
+
 
 
 
