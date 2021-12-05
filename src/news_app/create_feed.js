@@ -1,9 +1,11 @@
-// target output
-const news = document.querySelector('.news-list');
-
-// GENERATE NEWS FEED
-
 export const makeFeed = array => {
+    // TARGET DOM ELEMENT
+    const news = document.querySelector('.news-list');
+    // IF CLEAR ALL CURRENT PUBLISHED NEWS
+    while (news.firstChild) {
+        news.firstChild.remove();
+    }
+    // GENERATE NEWS FEED
     array.forEach(item => {
         const {title, author, published, description, source, url, urlToImage} = item;
         // NEW NEWS DIV
@@ -40,18 +42,6 @@ export const makeFeed = array => {
         // APPEND READY DIV
         news.appendChild(newsDiv);
     })
-};
-
-    // CLEAR NEWS FEED
-            
-    
-
-export const removeAllNews = () => { 
-    const newsList = document.querySelector('.news-list');
-    console.log(newsList);
-    while (newsList.firstChild) {
-        newsList.firstChild.remove();
-    }
 };
 
 
