@@ -1,0 +1,36 @@
+*{
+  box-sizing: border-box;
+}
+#app{
+  margin: 200px;
+}
+#menu-search{
+  margin: 50px;
+}
+#menus {
+  display: flex;
+  flex-wrap: wrap;
+} 
+.menu-element {
+  background-color: rgb(224, 224, 224);
+  height: 80vh;
+  width: 33%;
+  min-width: 350px;
+  border: 1px solid black;
+}
+.menu-element-title{
+  font-size: 25px;
+  padding-bottom: 5px;
+  text-align:center;
+}  
+.menu-element-restaurant {
+  font-size: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.menu-element-image {
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 350px;
+  margin: 0 auto;
+}

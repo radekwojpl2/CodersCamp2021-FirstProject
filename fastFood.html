@@ -5,11 +5,25 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/fastFood.css">
   <title>Vite App</title>
 </head>
 
 <body>
-  <div id="app">Hello World</div>
+  <div id="app">
+    <main>
+      <input id="menu-search" type="text" placeholder="find menu e.g. burger, wrap ">
+      <button id="search">Search</button>
+      <div id="menus">
+        <div class="menu-element"></div>
+        <div class="menu-element"></div>
+        <div class="menu-element"></div>
+        <div class="menu-element"></div>
+        <div class="menu-element"></div>
+        <div class="menu-element"></div>
+      </div>
+    </main>
+  </div>
   <script type="module" src="./src/fastFood.js"></script>
 </body>
 
