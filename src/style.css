@@ -5,4 +5,15 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: lightcoral;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }

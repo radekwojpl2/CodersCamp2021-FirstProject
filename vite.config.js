@@ -8,7 +8,7 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        shoppingList: resolve(__dirname, 'src/views/ShoppingList/index.html')
+        shoppingList: resolve(__dirname, 'shoppingList.html')
       }
     }
   }
