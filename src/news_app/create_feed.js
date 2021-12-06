@@ -1,10 +1,10 @@
 export const makeFeed = array => {
-    // TARGET DOM ELEMENT
+    // CREATE NEWS FEED CONTAINER
+    const newsParent = document.querySelector('.news');
+    const newsContainer = document.createElement('div');
+    newsContainer.classList.add('news-list')
+    newsParent.appendChild(newsContainer)
     const news = document.querySelector('.news-list');
-    // IF CLEAR ALL CURRENT PUBLISHED NEWS
-    while (news.firstChild) {
-        news.firstChild.remove();
-    }
     // GENERATE NEWS FEED
     array.forEach(item => {
         const {title, author, published, description, source, url, urlToImage} = item;
