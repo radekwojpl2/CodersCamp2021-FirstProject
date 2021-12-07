@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="shopping-list.css">
+    <link rel="stylesheet" href="../style.css">
 
 </head>
 
@@ -15,7 +15,9 @@
     <component-header></component-header>
     <main>
         <section class="shoppinglist__search">
-            <h3 class="shoppinglist__search--header">Recipe search</h3>
+            <h3 class="shoppinglist__search--header">Recipe Search</h3>
+            <p class="shoppinglist__search--paragraph">Get the ingredients for any recipe and create a culinary
+                shopping list.</p>
             <div>
                 <input type="text" class="shoppinglist__search--input shoppinglist__search--input--js"
                     placeholder="Search for a recipe">
@@ -25,12 +27,13 @@
         </section>
         <section class="shoppinglist__results">
             <h3 class="shoppinglist__results--header">Shopping List</h3>
+            <div class="shoppinglist__results--ingredients-container"></div>
         </section>
     </main>
     <footer></footer>
 
     <script src="shopping-list.js"></script>
-    <script type="module" src="./src/components/header.js"></script>
+    <script type="module" src="../componenets/header.js"></script>
 </body>
 
 </html>
