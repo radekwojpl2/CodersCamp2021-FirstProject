@@ -1,4 +1,4 @@
-const apiKey = '32a30d5008384c0abc8d37b703d08307';
+const apiKey = 'b51b95c93a154a4c9c7d6bc73c618c5f';
 const divs = Array.from(document.getElementsByClassName('menu-element'))
 const searchButton = document.getElementById('search')
 
