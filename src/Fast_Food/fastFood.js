@@ -1,5 +1,5 @@
-const apiKey = 'b51b95c93a154a4c9c7d6bc73c618c5f';
-const divs = Array.from(document.getElementsByClassName('menu-element'))
+const apiKey = '32a30d5008384c0abc8d37b703d08307';
+const divTarget = document.getElementById('menus')
 const searchButton = document.getElementById('search')
 
 const makeElementWithClass = (tag, className) => {
@@ -14,19 +14,24 @@ const getApi = async (url) => {
     return await res.json();
   } else {
     console.log('Something went wrong!')
+    divTarget.textContent = 'Upsss. Something went wrong!'
   }
 }
 
 const renderMenuItems = () => {
-  clearDivs();
+  const numberInput = document.getElementById('menu-amount');
+  const number = numberInput.value;
+  clearDivs(number);
   const input = document.getElementById('menu-search');
-  let query = input.value
-
-  getApi(`https://api.spoonacular.com/food/menuItems/search?query=${query}&number=6&apiKey=${apiKey}&addMenuItemInformation=true`)
+  let query;
+  input.value ? query = input.value : query = "menu";
+  
+  getApi(`https://api.spoonacular.com/food/menuItems/search?query=${query}&number=${number}&apiKey=${apiKey}&addMenuItemInformation=true`)
   .then(data => {
       const arrayMenuItems = data.menuItems;
 
-      arrayMenuItems.forEach((element, i) => {
+      arrayMenuItems.forEach((element) => {
+        const menuElement = makeElementWithClass('div', 'menu-element')
         const titleElement = makeElementWithClass('div', 'menu-element-title');
         const restaurantName = makeElementWithClass('div', 'menu-element-restaurant')
         const imgElement = makeElementWithClass('div', 'menu-element-image');
@@ -39,27 +44,27 @@ const renderMenuItems = () => {
 
         let imageSrc = element.image;
         imgElement.style.backgroundImage = `url(${imageSrc})`
-
-        divs[i].appendChild(titleElement);
-        divs[i].appendChild(restaurantName);
-        divs[i].appendChild(imgElement);
+        divTarget.appendChild(menuElement);
+        menuElement.appendChild(titleElement);
+        menuElement.appendChild(restaurantName);
+        menuElement.appendChild(imgElement);
         
-        renderNutritionInfo(element, i)
+        renderNutritionInfo(element, menuElement)
     })
   });
 }
 
 searchButton.addEventListener('click', renderMenuItems)
 
-const clearDivs = () => {
-  for (let i=0; i< 6; i++){
-    while(divs[i].firstChild) {
-      divs[i].removeChild(divs[i].firstChild);
+const clearDivs = number => {
+  for (let i=0; i< number; i++){
+    while(divTarget.firstChild) {
+      divTarget.removeChild(divTarget.firstChild);
   }
   }
 }
 
-const renderNutritionInfo = (element, i) => {
+const renderNutritionInfo = (element, menuElement) => {
   const arrayNutrition = element.nutrition.nutrients;
   const nutritionInfo = document.createElement('ul');
   arrayNutrition.forEach((skladnik) => {    
@@ -68,5 +73,6 @@ const renderNutritionInfo = (element, i) => {
     const nutritionUnit = skladnik.unit;
     nutritionInfo.innerHTML += `<li>${nutritionName} ${nutritionAmount} ${nutritionUnit}</li>`;       
    })
-  divs[i].appendChild(nutritionInfo);
+  menuElement.appendChild(nutritionInfo);
 }
+renderMenuItems();

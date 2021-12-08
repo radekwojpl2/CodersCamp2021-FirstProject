@@ -1,8 +1,8 @@
 *{
   box-sizing: border-box;
 }
-#menu-search{
-  margin: 50px;
+#menu-search, #menu-amount{
+  margin: 1em;
 }
 #menus {
   display: flex;
