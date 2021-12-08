@@ -4,16 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="./src/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/style.css">
   <title>Vite App</title>
 </head>
 
 <body>
+<<<<<<< HEAD
   <div id="app"></div>
   <a href="./shoppingList.html">Test</a>
   Main Page
   <script type="module" crossorigin src="./src/main.js"></script>
+=======
+  <div id="app">
+    <component-header></component-header>
+    <main>
+      <div class="news">
+        <select class="news-options">
+          <option value="+food">Food</option>
+          <option value="+wine">Wine</option>
+          <option value="+restuarants">Restuarants</option>
+        </select>
+        <div class="news-list">
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/componenets/header.js"></script>
+  <script type="module" src="./src/news_app/news_app.js"></script>
+>>>>>>> origin/feature/main-menu
 </body>
 
 </html>
