@@ -5,29 +5,50 @@
   margin: 1em;
 }
 #menus {
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 1rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
 } 
 .menu-element {
   background-color: rgb(224, 224, 224);
-  height: 80vh;
+  height: 90vh;
   width: 33%;
-  min-width: 350px;
-  border: 1px solid black;
+  margin-right: 3px;
 }
 .menu-element-title{
-  font-size: 25px;
-  padding-bottom: 5px;
+  font-size: 1.5rem;
+  padding: 10px 10px;
   text-align:center;
 }  
 .menu-element-restaurant {
-  font-size: 25px;
+  font-size: 1.5rem;
   padding-bottom: 20px;
   text-align: center;
 }
 .menu-element-image {
   background-repeat: no-repeat;
-  height: 300px;
-  width: 350px;
-  margin: 0 auto;
+  background-position: center center;
+  background-size: 300 250px;
+  height: 35%;
+  width: 95%; 
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+ul {
+  list-style: none;
+  font-size: .9rem;
+}
+@media (max-width: 1250px){
+#menus {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.menu-element{
+  width: 100%;
+}
 }
