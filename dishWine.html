@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/wineView.css">
+  <script defer src="src/dishWine.js"></script>
+</head>
+
+<body>
+  <header>Header</header>
+  <main>
+
+    <h1>DISH WINE</h1>
+    <!-- As a user
+        I want to see which dish comes with selected wine
+        so that I can choose right one for a dinner-->
+
+    <div>
+      <label for="wine-choice">Choose a wine</label>
+      <input type='text' list="wine-type" id="wine-choice" name="wine-choice" />
+
+      <datalist id="wine-type">
+        <option value="Assyrtiko"></option>
+        <option value="Pinot blanc"></option>
+        <option value="Malbec"></option>
+      </datalist>
+    </div>
+
+    <div>
+      <!-- 
+        "text": "Malbec is a dry red wine which is bold and full bodied. It goes especially well with stew, chili, steak, burger, and jjigae.",
+        "pairings": [
+            "stew",
+            "chili",
+            "steak",
+            "burger",
+            "jjigae"
+        ] 
+      -->
+
+      <h2>Malbec</h2>
+
+      <p>Malbec is a dry red wine which is bold and full bodied. It goes especially well with stew, chili, steak,
+        burger, and jjigae.</p>
+
+      <p>
+        <span>stew</span>
+        <span>chili</span>
+        <span>steak</span>
+        <span>burger</span>
+        <span>jjigae</span>
+      </p>
+    </div>
+
+  </main>
+  <footer>Footer</footer>
+
+</body>
+
+</html>

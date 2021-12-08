@@ -1,7 +1,8 @@
 'use strict';
 
 const url = 'https://api.spoonacular.com/food/products/search?';
-const apiKey = '8cc85c6ead034a4e83c74be12baa0f04';
+// const apiKey = '8cc85c6ead034a4e83c74be12baa0f04';
+const apiKeyTEMP = '1679c57de07f43f197f7cbde1472df41';
 
 const query = 'wine';
 const number = 100;
@@ -10,7 +11,7 @@ const displayWineList = document.querySelector('.wine-list');
 
 async function getWineList() {
   try {
-    const res = await fetch(`${url}query=${query}&number=${number}&apiKey=${apiKey}`)
+    const res = await fetch(`${url}query=${query}&number=${number}&apiKey=${apiKeyTEMP}`)
 
     if (!res.ok) throw new Error(`Whoops! We're having problem getting data.`)
 
@@ -25,7 +26,7 @@ async function getWineList() {
 
 function showWine(wines) {
   wines.forEach(wine => {
-    console.log(wine.title, wine.image)
+    // console.log(wine.title, wine.image)
     const wineEl = document.createElement('div');
     wineEl.innerHTML = `
       <div>
