@@ -1,3 +1,5 @@
 export const clearFeed = () => {
-  document.querySelector('.news-list').remove()
+  if (document.querySelector('.news-list')) {
+    document.querySelector('.news-list').remove();
+  }
 };

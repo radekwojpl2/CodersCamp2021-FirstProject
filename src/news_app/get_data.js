@@ -1,4 +1,4 @@
-export const getData = async (source) => {
+export async function getData (source) {
     const response = await fetch(source);
     if(response.status !== 200){
         throw new Error('can not fetch the data');
