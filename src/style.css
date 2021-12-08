@@ -5,6 +5,17 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+  background-color: lightcoral;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* MAIN MENU NAVIGATION 
