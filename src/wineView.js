@@ -15,10 +15,10 @@ async function getWineList() {
 
     if (!res.ok) throw new Error(`Whoops! We're having problem getting data.`)
 
-    const data = await res.json()
+    const data = await res.json();
     const wineList  = data.products;
     
-    showWine(wineList)
+    showWine(wineList);
   } catch (err) {
     console.log(`💥 ${err}`)
   }
