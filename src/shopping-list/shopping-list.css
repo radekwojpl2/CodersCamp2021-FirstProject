@@ -110,6 +110,16 @@ main {
   padding: 0.5rem 0;
 }
 
+.shoppinglist__results--paragraph {
+  margin-top: 1.5rem;
+  font-size: 16px;
+  opacity: 80%;
+}
+
+.shoppinglist__results--paragraph-remover {
+  display: none;
+}
+
 .shoppinglist__results--remove-button {
   padding: 0.16rem 0.57rem;
   margin-right: 0.5rem;
