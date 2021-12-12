@@ -1,51 +1,19 @@
-/* eslint-disable no-use-before-define */
+import { getIngredients, getRecipes } from "./shopping-list-api.js";
+
 const searchInput = document.querySelector('.shoppinglist__search--input--js');
 const displayedRecipiesList = document.querySelector('.shoppinglist__displayed-recipies--js');
 const shoppingListContainer = document.querySelector('.shoppinglist__results--ingredients-container');
 const shoppingListParagraph = document.querySelector('.shoppinglist__results--paragraph');
 
-searchInput.addEventListener('keyup', () => {
-  const searchQuery = searchInput.value;
-  const recipes = getRecipesFromAPI(searchQuery);
-  showRecipes(recipes);
-});
-
 const shoppingList = [];
 
-const getRecipesFromAPI = (searchQuery) => {
-  if (searchQuery.length > 0) {
-    return searchQuery.length > 3
-      ? [
-          {
-            name: 'przepis1',
-            id: 1,
-            ingredients: [
-              { name: 'maslo', id: 1 },
-              { name: 'cukier', id: 2 },
-            ],
-          },
-        ]
-      : [
-          {
-            name: 'przepis1',
-            id: 1,
-            ingredients: [
-              { name: 'maslo', id: 1 },
-              { name: 'cukier', id: 2 },
-            ],
-          },
-          {
-            name: 'przepis2',
-            id: 2,
-            ingredients: [
-              { name: 'cukier', id: 2 },
-              { name: 'jajko', id: 3 },
-            ],
-          },
-        ];
+searchInput.addEventListener('keyup', async () => {
+  const searchQuery = searchInput.value;
+  if (searchQuery.length > 0){
+    const recipes = await getRecipes(searchQuery);
+    showRecipes(recipes);
   }
-  return [];
-};
+});
 
 const showRecipes = (recipes) => {
   displayedRecipiesList.innerHTML = '';
@@ -53,20 +21,21 @@ const showRecipes = (recipes) => {
     const recipeElement = document.createElement('div');
     recipeElement.className = 'shoppinglist__displayed-recipies--element';
     const recipeElementHeader = document.createElement('h5');
-    recipeElementHeader.innerHTML = `${recipes[i].id} ${recipes[i].name}`;
+    recipeElementHeader.innerHTML = `${recipes[i].title}`;
     const recipeIngredientsContainer = document.createElement('div');
-    recipeElementHeader.onclick = () => onRecipeClicked(recipeIngredientsContainer, recipes[i].ingredients);
+    recipeElementHeader.onclick = () => onRecipeClicked(recipeIngredientsContainer, recipes[i].id);
     recipeElement.appendChild(recipeElementHeader);
     recipeElement.appendChild(recipeIngredientsContainer);
     displayedRecipiesList.appendChild(recipeElement);
   }
 };
 
-const onRecipeClicked = (container, ingredients) => {
+const onRecipeClicked = async (container, recipeId) => {
+  const ingredients = await getIngredients(recipeId);
   if (container.innerHTML === '') {
     for (let i = 0; i < ingredients.length; i++) {
       const ingredientElement = document.createElement('div');
-      ingredientElement.innerHTML = `${ingredients[i].id} ${ingredients[i].name}`;
+      ingredientElement.innerHTML = `${ingredients[i].name}`;
       ingredientElement.className = 'shoppinglist__displayed-ingredients';
       const ingredientAddButton = document.createElement('button');
       ingredientAddButton.innerHTML = `+`;
@@ -86,7 +55,7 @@ const addIngredient = (ingredient) => {
   updateShoppingList();
 };
 
-updateShoppingList = () => {
+const updateShoppingList = () => {
   shoppingListContainer.innerHTML = '';
   for (let i = 0; i < shoppingList.length; i++) {
     const shoppingListIngredientElement = document.createElement('div');
@@ -105,10 +74,8 @@ updateShoppingList = () => {
     shoppingListIngredientElement.appendChild(ingredientRemoveButton);
   }
   if (shoppingList.length !== 0) {
-    console.log('nie jest 0')
     shoppingListParagraph.classList.add('shoppinglist__results--paragraph-remover');
   } else if(shoppingList.length === 0) {
-    console.log('jest 0')
     shoppingListParagraph.classList.remove('shoppinglist__results--paragraph-remover');
   }
 };
