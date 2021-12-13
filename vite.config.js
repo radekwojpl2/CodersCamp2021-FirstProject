@@ -9,6 +9,7 @@ module.exports = defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         shoppingList: resolve(__dirname, 'shoppingList.html')
+        fastFood: resolve(__dirname, 'fastFood.html')
       }
     }
   }
