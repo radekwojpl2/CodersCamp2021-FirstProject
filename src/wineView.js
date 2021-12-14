@@ -28,11 +28,10 @@ function showWine(wines) {
   wines.forEach(wine => {
     // console.log(wine.title, wine.image)
     const wineEl = document.createElement('div');
+    wineEl.classList.add('wine')
     wineEl.innerHTML = `
-      <div>
-          <h3>${wine.title}</h3>
-          <img src="${wine.image}" alt="">
-       </div>
+        <img class="wine-img" src="${wine.image}" alt="">
+      <h3 class="wine-name">${wine.title}</h3>
      `;
   
     displayWineList.appendChild(wineEl)

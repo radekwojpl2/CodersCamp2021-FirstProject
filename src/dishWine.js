@@ -15,7 +15,8 @@ wineChoice.addEventListener('input', function () {
 
 async function getDishWine() {
   try {
-    const res = await fetch(`${url}wine=${wine}&apiKey=${apiKeyTEMP}`)
+    const res = await fetch(`${url}
+    https://api.spoonacular.com/food/wine/dishes?wine=${wine}&apiKey=${apiKeyTEMP}`)
 
     if (!res.ok) throw new Error(`Whoops! We're having problem getting data.`)
 

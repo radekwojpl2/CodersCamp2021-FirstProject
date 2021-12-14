@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
 body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-template-rows: 60px 1fr 50px;
+  grid-template-rows: 10rem 1fr 10rem;
+
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.8rem;
 }
 
 
 header,
 footer {
-  grid-column: 1 / 4;
+  grid-column: 1 / -1;
   background-color: black;
   color: #fff;
-  font-size: 30px;
+  font-size: 4rem;
 }
 
 main {
@@ -21,11 +36,64 @@ main {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.primary-heading {
+  font-size: 5.5rem;
+  font-weight: 800;
+}
+
+.secondary-heading{
+  margin: 3.5rem;
+  font-size: 4rem;
+  font-weight: 600;
+  
 }
 
 .wine-list {
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.wine {
+  width: 50rem;
+  margin: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+/* 
+.wine-img-container {
+  max-width: 100px;
+  
+} */
+
+.wine-name {
+  font-weight: 400;
+}
+
+.wine-img {
+  /* float: left; */
+
+  margin-right: 3rem;
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+  transition: transform 0.3s linear;
+}
+
+.wine:hover {
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+  transform: scale(1.8);
+  
+
+
 }
