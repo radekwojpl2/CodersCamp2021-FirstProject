@@ -17,8 +17,6 @@ const newsOptions = document.querySelector('.news-options');
 function makeNews(source) {
   getData(source)
     .then((data) => {
-      const test = data.data[0].published_at;
-      console.log(test);
       const newsArticles = data.data;
       makeFeed(newsArticles);
     })

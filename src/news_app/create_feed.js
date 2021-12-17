@@ -33,12 +33,12 @@ export const makeFeed = (array) => {
   const news = document.querySelector('.news-list');
   // GENERATE NEWS FEED
   array.forEach((item) => {
-    const { title, published_at, description, source, url, image_url } = item;
+    const { title, published_at, description, url, image_url } = item;
     // NEW NEWS DIV
     const newsDiv = document.createElement('div');
-    newsDiv.classList.add('news-item');
+    newsDiv.classList.add('content-box', 'news-item');
     // ADD IMAGE SECTION
-    if (image_url) {
+    if (image_url !== null || image_url !== 'https://www.retailtimes.co.uk/public_html/favicon.ico') {
       const picContainer = document.createElement('div');
       picContainer.classList.add('pic-container');
       const newsPic = document.createElement('img');
@@ -61,7 +61,8 @@ export const makeFeed = (array) => {
     // }
     // ADD PUBLISHED DATE
     const newsPublished = document.createElement('h5');
-    newsPublished.innerText = published_at;
+    const prettyDate = new Date(published_at).toLocaleDateString();
+    newsPublished.innerText = prettyDate;
     infoContainer.appendChild(newsPublished);
     // ADD NEWS CONTETNT
     const newsDescription = document.createElement('p');
