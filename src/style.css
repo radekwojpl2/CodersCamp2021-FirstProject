@@ -48,4 +48,9 @@
 
 .nav-item {
   margin: 0 15px 15px;
+  text-decoration: none;
+}
+
+a .nav-link {
+  text-decoration: none;
 }
