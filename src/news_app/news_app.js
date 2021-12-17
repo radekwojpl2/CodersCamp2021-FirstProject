@@ -1,20 +1,14 @@
-// import { format } from "prettier";
-// import { doc } from 'prettier';
-
 import { makeFeed } from './create_feed';
 import { getData } from './get_data';
 import { clearFeed } from './clear_feed';
 // import { updateFeed } from './update_feed.js';
 
-// VARIABLES
-// const urlFood = `https://newsapi.org/v2/everything?q=+food&sortBy=popularity&pageSize=5&apiKey=b10b22f57fca436ca78791aa2c90a376`;
-// const urlWine = `https://newsapi.org/v2/everything?q=+wine&sortBy=popularity&pageSize=5&apiKey=b10b22f57fca436ca78791aa2c90a376`;
-// const urlRestaurant = `https://newsapi.org/v2/everything?q=+wine&sortBy=popularity&pageSize=5&apiKey=b10b22f57fca436ca78791aa2c90a376`;
+import './news_style.css';
 
+// VARIABLES
 const urlFood = `https://api.thenewsapi.com/v1/news/all?api_token=NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2&categories=food&language=en`;
 const urlWine = `https://api.thenewsapi.com/v1/news/all?api_token=NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2&language=en&search=wines`;
 const urlRestaurant = `https://api.thenewsapi.com/v1/news/all?api_token=NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2&categories=food&language=en&search=restuarant`;
-
 
 const newsOptions = document.querySelector('.news-options');
 
@@ -23,7 +17,8 @@ const newsOptions = document.querySelector('.news-options');
 function makeNews(source) {
   getData(source)
     .then((data) => {
-      // console.log(data)
+      const test = data.data[0].published_at;
+      console.log(test);
       const newsArticles = data.data;
       makeFeed(newsArticles);
     })
@@ -56,4 +51,4 @@ function updateFeed(e) {
 newsOptions.addEventListener('change', updateFeed);
 
 // ! RUNTIME
-makeNews(urlRestaurant);
+makeNews(urlFood);
