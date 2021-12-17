@@ -7,28 +7,28 @@ export const makeFeed = (array) => {
   const news = document.querySelector('.news-list');
   // GENERATE NEWS FEED
   array.forEach((item) => {
-    const { title, author, publishedAt, description, source, url, urlToImage } = item;
+    const { title, published_at, description, source, url, image_url } = item;
     // NEW NEWS DIV
     const newsDiv = document.createElement('div');
     newsDiv.classList.add('news-item');
     // ADD IMAGE
     const newsPic = document.createElement('img');
     newsPic.setAttribute('width', '400px');
-    newsPic.src = urlToImage;
+    newsPic.src = image_url;
     newsDiv.appendChild(newsPic);
     // ADD TITLE HEADER
     const newsHead = document.createElement('h3');
     newsHead.innerText = title;
     newsDiv.appendChild(newsHead);
-    // ADD AUTHOR
-    if (author) {
-      const newsAuthor = document.createElement('h4');
-      newsAuthor.innerText = author;
-      newsDiv.appendChild(newsAuthor);
-    }
+    // // ADD AUTHOR
+    // if (author) {
+    //   const newsAuthor = document.createElement('h4');
+    //   newsAuthor.innerText = author;
+    //   newsDiv.appendChild(newsAuthor);
+    // }
     // ADD PUBLISHED DATE
     const newsPublished = document.createElement('h5');
-    newsPublished.innerText = publishedAt;
+    newsPublished.innerText = published_at;
     newsDiv.appendChild(newsPublished);
     // ADD NEWS CONTETNT
     const newsDescription = document.createElement('p');
@@ -37,7 +37,7 @@ export const makeFeed = (array) => {
     // ADD READ MORE LINK
     const readMore = document.createElement('a');
     readMore.href = url;
-    readMore.innerText = `Continue reading on ${source.name}`;
+    readMore.innerText = `Continue reading ...`;
     newsDiv.appendChild(readMore);
     // APPEND READY DIV
     news.appendChild(newsDiv);
