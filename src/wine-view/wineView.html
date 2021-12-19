@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine View</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="wineView.css">
+
+  <!-- <script defer src="../components/header.js"></script> -->
+  <script defer src="wineView.js"></script>
+</head>
+
+<body>
+  <header>Header</header>
+
+  <main>
+    <h1 class='primary-heading'>Wine View</h1>
+
+    <form>
+      <div class=select-block">
+        <label for="wine"><i class="fas fa-wine-glass-alt"></i> Wines: </label>
+        <select name="wine" id="wine">
+          <option value=""></option>
+          <optgroup label="White wine">
+            <option value="assyrtiko">Assyrtiko</option>
+            <option value="chardonnay">Chardonnay</option>
+            <option value="frascati">Frascati</option>
+            <option value="riesling">Riesling</option>
+            <option value="sauvignon_blanc">Sauvignon Blanc</option>
+          </optgroup>
+
+          <optgroup label="Red wine">
+            <option value="malbec">Malbec</option>
+            <option value="primitivo">Primitivo</option>
+            <option value="sangiovese">Sangiovese</option>
+            <option value="zinfandel">Zinfandel</option>
+            <option value="zweigelt">Zweigelt</option>
+          </optgroup>
+
+          <optgroup label="Rose wine">
+            <option value="sparkling_rose">Sparkling Rose</option>
+          </optgroup>
+
+          <optgroup label="Sparkling wine">
+            <option value="cava">Cava</option>
+            <option value="champagne">Champagne</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="select-block">
+        <label for="price"><i class="fas fa-dollar-sign"></i> Price up to: </label>
+        <select name="price" id="price" disabled>
+          <option value=""></option>
+          <option value="25">$ 25</option>
+          <option value="50">$ 50</option>
+          <option value="75">$ 75</option>
+          <option value="500">$ 500</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="wine-list"></div>
+  </main>
+
+  <footer>
+    Footer
+  </footer>
+</body>
+
+</html>
