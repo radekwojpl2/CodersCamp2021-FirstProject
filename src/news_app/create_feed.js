@@ -1,29 +1,3 @@
-// const dateBuilder = (dateIn) => {
-//   const dateOut = new Date(dateIn);
-//   const months = [
-//     'January',
-//     'February',
-//     'March',
-//     'April',
-//     'May',
-//     'June',
-//     'July',
-//     'August',
-//     'September',
-//     'October',
-//     'November',
-//     'December',
-//   ];
-//   const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-//   const day = days[dateOut.getDay()];
-//   const date = dateIn.getdateIn();
-//   const month = months[dateIn.getMonth()];
-//   const year = dateIn.getFullYear();
-
-//   return `${day} ${date} ${month} ${year}`;
-// };
-
 export const makeFeed = (array) => {
   // CREATE NEWS FEED CONTAINER
   const newsParent = document.querySelector('.news');
@@ -53,12 +27,6 @@ export const makeFeed = (array) => {
     const newsHead = document.createElement('h3');
     newsHead.innerText = title;
     infoContainer.appendChild(newsHead);
-    // // ADD AUTHOR
-    // if (author) {
-    //   const newsAuthor = document.createElement('h4');
-    //   newsAuthor.innerText = author;
-    //   newsDiv.appendChild(newsAuthor);
-    // }
     // ADD PUBLISHED DATE
     const newsPublished = document.createElement('h5');
     const prettyDate = new Date(published_at).toLocaleDateString();
@@ -78,6 +46,12 @@ export const makeFeed = (array) => {
     // APPEND READY DIV
     news.appendChild(newsDiv);
   });
+};
+
+export const clearFeed = () => {
+  if (document.querySelector('.news-list')) {
+    document.querySelector('.news-list').remove();
+  }
 };
 
 export default makeFeed;

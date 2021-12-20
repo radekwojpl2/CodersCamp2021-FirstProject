@@ -1,14 +1,12 @@
-import { makeFeed } from './create_feed';
+import { makeFeed, clearFeed } from './create_feed';
 import { getData } from './get_data';
-import { clearFeed } from './clear_feed';
-// import { updateFeed } from './update_feed.js';
 
-import './news_style.css';
+const apiKey = 'NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2';
+const apiUrl = `https://api.thenewsapi.com/v1/news/all?api_token=`;
 
-// VARIABLES
-const urlFood = `https://api.thenewsapi.com/v1/news/all?api_token=NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2&categories=food&language=en`;
-const urlWine = `https://api.thenewsapi.com/v1/news/all?api_token=NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2&language=en&search=wines`;
-const urlRestaurant = `https://api.thenewsapi.com/v1/news/all?api_token=NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2&categories=food&language=en&search=restuarant`;
+const catFood = `&categories=food&language=en`;
+const catWine = `&language=en&search=wines`;
+const catRestaurant = `&categories=food&language=en&search=restuarant`;
 
 const newsOptions = document.querySelector('.news-options');
 
@@ -29,15 +27,15 @@ function updateFeed(e) {
   switch (e.target.value) {
     case '+food':
       clearFeed();
-      makeNews(urlFood);
+      makeNews(`${apiUrl}${apiKey}${catFood}`);
       break;
     case '+wine':
       clearFeed();
-      makeNews(urlWine);
+      makeNews(`${apiUrl}${apiKey}${catWine}`);
       break;
     case '+restuarants':
       clearFeed();
-      makeNews(urlRestaurant);
+      makeNews(`${apiUrl}${apiKey}${catRestaurant}`);
       break;
     default:
       break;
@@ -49,4 +47,4 @@ function updateFeed(e) {
 newsOptions.addEventListener('change', updateFeed);
 
 // ! RUNTIME
-makeNews(urlFood);
+makeNews(`${apiUrl}${apiKey}${catFood}`);

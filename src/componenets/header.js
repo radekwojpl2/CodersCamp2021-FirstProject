@@ -8,32 +8,33 @@ class foodAppHeader extends HTMLElement {
         href: 'index.html',
         active: this.checkPathname('index.html'),
       },
-      {
-        name: 'SHOPPING LIST',
-        href: 'shoppingList.html',
-        active: this.checkPathname('shoppingList.html'),
-      },
-      {
-        name: 'WINE',
-        href: 'page.html',
-        active: this.checkPathname('p.html'),
-      },
-      {
-        name: 'NUTRITION',
-        href: 'page.html',
-        active: this.checkPathname('p.html'),
-      },
-      {
-        name: 'FAST FOOD',
-        href: 'page.html',
-        active: this.checkPathname('p.html'),
-      },
+      // {
+      //   name: 'SHOPPING LIST',
+      //   href: 'shoppingList.html',
+      //   active: this.checkPathname('shoppingList.html'),
+      // },
+      // {
+      //   name: 'WINE',
+      //   href: 'page.html',
+      //   active: this.checkPathname('p.html'),
+      // },
+      // {
+      //   name: 'NUTRITION',
+      //   href: 'page.html',
+      //   active: this.checkPathname('p.html'),
+      // },
+      // {
+      //   name: 'FAST FOOD',
+      //   href: 'page.html',
+      //   active: this.checkPathname('p.html'),
+      // },
     ];
   }
 
   checkPathname(path) {
+    const slashLocation = 1;
     const pathname = window.location.pathname.split('/');
-    return pathname[1] === path;
+    return pathname[slashLocation] === path;
   }
 
   connectedCallback() {
