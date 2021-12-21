@@ -1,6 +1,5 @@
 'use strict';
 
-
 // As a user
 // I want to see list of wines
 // so that i can chose one of them and read description about them.
@@ -18,7 +17,7 @@
 // So that I can pick what suites my needs.
 
 
-const apiKey = '167db50f21234cc7af3782d41fd0ba8f';
+const apiKey = 'f3969421f26440d898b6fdd1849e993f';
 
 const urlWine = 'https://api.spoonacular.com/food/wine/recommendation?';
 const urlDish = 'https://api.spoonacular.com/food/wine/dishes?';
@@ -40,11 +39,15 @@ selectedWine.addEventListener('change', function () {
   }
 });
 
-selectedPrice.addEventListener('change', function () {
-  console.log(userWine, this.value)
-  if (this.value)
-    showWineByPrice(userWine, this.value)
-})
+selectedPrice.addEventListener('change', function (e) {
+  const value = +e.target.value;
+  const label = e.target.nextElementSibling;
+
+  label.innerHTML = `$ ${value}`;
+
+  showWineByPrice(userWine, this.value)
+});
+
 
 // Function to show wines to users
 async function showWine(wine) {
@@ -77,8 +80,8 @@ async function showWineByPrice(wine, price) {
     const dataDish = await res2.json()
 
     dataWine.recommendedWines.forEach(winePrice => {
+      displayWineEl.innerHTML = ''
       if (winePrice.price <= price) {
-        displayWineEl.innerHTML = ''
         displayWine(dataWine.recommendedWines, dataDish.pairings)
       }
     })
@@ -122,7 +125,7 @@ function displayWine(wines, pairings) {
 // Function to show paired dishes
 function showPairings(pairings) {
   let html = '';
-  
+
   pairings.forEach(el => html += `<span class="wine-dish-pairing">${el}</span>`)
 
   return html;
