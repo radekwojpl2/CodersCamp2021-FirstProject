@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="wineView.css">
+  <link rel="stylesheet" href="./src/wine-view/wineView.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <h1 class='primary-heading'>Wine View</h1>
 
     <form>
-      <div class=select-block">
+      <div class="select-block">
         <label for="wine"><i class="fas fa-wine-glass-alt"></i> Wines: </label>
         <select name="wine" id="wine">
           <option value=""></option>
@@ -62,8 +62,8 @@
     <div class="wine-list"></div>
   </main>
 
-  <script type="module" src="../componenets/header.js"></script>
-  <script type="module" src="wineView.js"></script>
+  <script type="module" crossorigin src="./src/componenets/header.js"></script>
+  <script type="module" src="./src/wine-view/wineView.js"></script>
 </body>
 
 </html>
