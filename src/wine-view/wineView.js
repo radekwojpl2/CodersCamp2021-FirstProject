@@ -1,22 +1,5 @@
 'use strict';
 
-// As a user
-// I want to see list of wines
-// so that i can chose one of them and read description about them.
-
-// As a user
-// I want to see which dish comes with selected wine
-// so that I can choose right one for a dinner
-
-// As a user
-// I want to be able to navigate to wine description be given wine
-// So that navigation from random recipe would be possible.
-
-// As a user
-// I want to get recommended wine for given prize
-// So that I can pick what suites my needs.
-
-
 const apiKey = 'f3969421f26440d898b6fdd1849e993f';
 
 const urlWine = 'https://api.spoonacular.com/food/wine/recommendation?';
