@@ -29,14 +29,14 @@ Concept was to create food focus app showing diffent possible production solutio
 ### Subjects covered
 
 variables
-Oprators
+oprators
 loops
 arrays & objects
 functions
 logical operators
 REST API
 DOM Manipulation
-externala libraries
+external libraries
 modules
 asyncronicity
 callbacks
@@ -49,6 +49,6 @@ TO BE WRITTEN
 
 ### Instructions
 
-`npm install` - to install required modules & dependecies
-`npm run build` - to build production/deplyment ready project
+`npm install` or `npm -i` - to install required modules & dependecies
+`npm run build` - to build production/deployment ready project
 `npm run dev` - to enable localhost preview server
