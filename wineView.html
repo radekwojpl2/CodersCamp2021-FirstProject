@@ -20,35 +20,8 @@
     <h1 class='primary-heading'>Wine View</h1>
 
     <form>
-      <div class="select-block">
+      <div class="select-block select-wine">
         <label for="wine"><i class="fas fa-wine-glass-alt"></i> Wines: </label>
-        <select name="wine" id="wine">
-          <option value=""></option>
-          <optgroup label="White wine">
-            <option value="assyrtiko">Assyrtiko</option>
-            <option value="chardonnay">Chardonnay</option>
-            <option value="frascati">Frascati</option>
-            <option value="riesling">Riesling</option>
-            <option value="sauvignon_blanc">Sauvignon Blanc</option>
-          </optgroup>
-
-          <optgroup label="Red wine">
-            <option value="malbec">Malbec</option>
-            <option value="primitivo">Primitivo</option>
-            <option value="sangiovese">Sangiovese</option>
-            <option value="zinfandel">Zinfandel</option>
-            <option value="zweigelt">Zweigelt</option>
-          </optgroup>
-
-          <optgroup label="Rose wine">
-            <option value="sparkling_rose">Sparkling Rose</option>
-          </optgroup>
-
-          <optgroup label="Sparkling wine">
-            <option value="cava">Cava</option>
-            <option value="champagne">Champagne</option>
-          </optgroup>
-        </select>
       </div>
 
       <div class="select-block">
@@ -60,10 +33,11 @@
       </div>
     </form>
 
-    <div class="wine-list"></div>
+    <section class="wine-list"></section>
   </main>
 
   <script type="module" crossorigin src="./src/componenets/header.js"></script>
+  <script type="module" src="./src/wine-view/selectWine.js"></script>
   <script type="module" src="./src/wine-view/wineView.js"></script>
 </body>
 

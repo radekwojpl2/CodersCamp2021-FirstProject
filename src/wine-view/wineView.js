@@ -1,5 +1,3 @@
-'use strict';
-
 const apiKey = 'f3969421f26440d898b6fdd1849e993f';
 
 const urlWine = 'https://api.spoonacular.com/food/wine/recommendation?';
@@ -10,6 +8,8 @@ const displayWineEl = document.querySelector('.wine-list');
 const selectedPrice = document.querySelector('#price');
 
 let userWine = '';
+
+
 
 selectedWine.addEventListener('change', function () {
   userWine = this.value;
