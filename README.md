@@ -26,6 +26,22 @@ Concept was to create food focus app showing diffent possible production solutio
 - HTML 5
 - CC3
 
+### Subjects covered
+
+variables
+Oprators
+loops
+arrays & objects
+functions
+logical operators
+REST API
+DOM Manipulation
+externala libraries
+modules
+asyncronicity
+callbacks
+HTTP requests
+
 ### Launch
 
 TO BE WRITTEN
