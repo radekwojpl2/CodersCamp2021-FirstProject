@@ -82,9 +82,9 @@ a.nav-link:hover {
   margin-top: 50px;
 }
 
-select .news-options {
-  width: 200px;
-  padding: 20px;
+select.news-options {
+  width: 250px;
+  padding: 10px;
 }
 
 /* MAIN PAGE NEWS */
