@@ -147,9 +147,15 @@ select .news-options {
   .news-item {
     flex-direction: column;
     min-width: 300px;
+    margin: 20px 10px;
   }
 
   .news-item .info-container {
     min-width: 95%;
+  }
+
+  .news-item img {
+    width: 100%;
+    height: auto;
   }
 }
