@@ -1,64 +1,50 @@
-// import { format } from "prettier";
-// import { doc } from 'prettier';
-import { makeFeed } from './create_feed.js';
-import { getData } from './get_data.js';
-import { clearFeed } from './clear_feed.js';
+import { makeFeed, clearFeed } from './create_feed';
+import { getData } from './get_data';
 
+const apiKey = 'NfHTFOIIekZazvqWjUldhd6FX72AKBkguV1ye0D2';
+const apiUrl = `https://api.thenewsapi.com/v1/news/all?api_token=`;
 
-// VARIABLES
-var topic = '+sports';
-const source = `https://newsapi.org/v2/everything?q=${topic}&sortBy=popularity&pageSize=5&apiKey=b10b22f57fca436ca78791aa2c90a376`;
+const catFood = `&categories=food&language=en`;
+const catWine = `&language=en&search=wines`;
+const catRestaurant = `&categories=food&language=en&search=restuarant`;
+
 const newsOptions = document.querySelector('.news-options');
+
+// FUNTIONS
+
+function makeNews(source) {
+  getData(source)
+    .then((data) => {
+      const newsArticles = data.data;
+      makeFeed(newsArticles);
+    })
+    .catch((err) => console.log('runtime error', err.message));
+}
+
+function updateFeed(e) {
+  e.preventDefault();
+  // console.log(e.target.value);
+  switch (e.target.value) {
+    case '+food':
+      clearFeed();
+      makeNews(`${apiUrl}${apiKey}${catFood}`);
+      break;
+    case '+wine':
+      clearFeed();
+      makeNews(`${apiUrl}${apiKey}${catWine}`);
+      break;
+    case '+restuarants':
+      clearFeed();
+      makeNews(`${apiUrl}${apiKey}${catRestaurant}`);
+      break;
+    default:
+      break;
+  }
+}
 
 // EVENTS LISTENERS
 
-newsOptions.addEventListener("change", updateFeed);
-
-
-// FUNTIONS 
-
-const makeNews = () => {
-    getData(source)
-        .then(data => {
-            const newsArticles = data.articles;
-            makeFeed(newsArticles);
-        })
-        .catch(err => console.log('runtime error', err.message));
-}
-
-function updateFeed (e) {
-    e.preventDefault();
-    // console.log(e.target.value);
-    switch (e.target.value) {
-        case '+food':
-            topic = '+food'
-            console.log(topic);
-            clearFeed();
-            break;
-        case '+wine':
-            topic = '+wine';
-            console.log(topic);
-            clearFeed();
-            break;
-        case '+restuarants':
-            topic = '+restuarants';
-            console.log(topic);
-            clearFeed();
-            break;
-    }
-    makeNews()
-};
-
-
+newsOptions.addEventListener('change', updateFeed);
 
 // ! RUNTIME
-
-makeNews();
-
-
-
-
-
-
-
-
+makeNews(`${apiUrl}${apiKey}${catFood}`);

@@ -1,11 +1,12 @@
+/* ROOT ELEMENTS */
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  background-color: lightcoral;
+  margin-top: 0px;
 }
 
 :root {
@@ -18,16 +19,16 @@
   box-sizing: inherit;
 }
 
-/* MAIN MENU NAVIGATION 
-.nav-header
-.nav-bar
-.nav-list
-.nav-item
-*/
+body {
+  background-color: #fef2e6;
+}
+
+/* MAIN MENU NAVIGATION */
 
 .nav-header {
   height: 70px;
   width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav-bar {
@@ -35,17 +36,103 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  background-color: #ffedca;
 }
 
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+ul.nav-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
-.nav-item {
-  margin: 0 15px 15px;
+li.nav-item {
+  float: left;
+  border-radius: 10px;
+}
+
+li.nav-item.active {
+  color: azure;
+  background-color: #f54749;
+  border-radius: 10px;
+}
+
+a.nav-link {
+  display: block;
+  color: rgb(53, 53, 53);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+a.nav-link:hover {
+  background-color: rgb(124, 124, 124);
+  border-radius: 10px;
+}
+
+/* NEWS SELECT */
+
+.news-options {
+  margin-top: 50px;
+}
+
+select .news-options {
+  width: 200px;
+  padding: 20px;
+}
+
+/* MAIN PAGE NEWS */
+
+.news-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.news-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 600px;
+  max-width: 800px;
+}
+
+.news-item .info-container {
+  width: 400px;
+  padding: 2.5em;
+}
+
+.news-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  padding: 0.5em;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.news-item h3 {
+  font-size: 1em;
+  text-shadow: 2px 2px 4px #0000005b;
+}
+
+.news-item h5 {
+  font-size: 0.8em;
+  padding-top: 1.2em;
+}
+
+.news-item p {
+  font-style: italic;
+  padding-top: 1.2em;
+}
+
+/* GENERIC ELEMENTS */
+
+.content-box {
+  margin-top: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

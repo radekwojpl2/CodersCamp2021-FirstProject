@@ -6,12 +6,16 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="./src/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Team Awesome: Food Guide to healthy and unhealthy treats</title>
 </head>
 
 <body>
+
   <div id="app">
-    <component-header></component-header>
+    <header>
+      <component-header></component-header>
+    </header>
     <main>
       <div class="news">
         <select class="news-options">
@@ -24,11 +28,15 @@
         </div>
       </div>
     </main>
+    <footer>
 
+    </footer>
   </div>
-  <script type="module" src="./src/main.js"></script>
-  <script type="module" src="./src/componenets/header.js"></script>
-  <script type="module" src="./src/news_app/news_app.js"></script>
+
+  <script type="module" crossorigin src="./src/main.js"></script>
+  <script type="module" crossorigin src="./src/componenets/header.js"></script>
+  <script type="module" crossorigin src="./src/news_app/news_app.js"></script>
+
 </body>
 
 </html>

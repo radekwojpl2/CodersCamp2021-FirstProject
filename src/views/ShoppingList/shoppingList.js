@@ -1,2 +1,1 @@
-import main from '../../main.js'
-console.log("test")
+import main from '../../main.js';
