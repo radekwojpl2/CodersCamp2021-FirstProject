@@ -13,11 +13,11 @@ class foodAppHeader extends HTMLElement {
       //   href: 'shoppingList.html',
       //   active: this.checkPathname('shoppingList.html'),
       // },
-      // {
-      //   name: 'WINE',
-      //   href: 'page.html',
-      //   active: this.checkPathname('p.html'),
-      // },
+      {
+        name: 'WINE',
+        href: 'wineView.html',
+        active: this.checkPathname('wineView.html'),
+      },
       // {
       //   name: 'NUTRITION',
       //   href: 'page.html',
