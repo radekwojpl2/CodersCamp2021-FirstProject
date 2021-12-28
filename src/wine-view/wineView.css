@@ -23,9 +23,6 @@ body {
 
 header {
   /* grid-column: 1 / -1; */
-  background-color: black;
-  color: #fff;
-  font-size: 4rem;
 }
 
 main {
