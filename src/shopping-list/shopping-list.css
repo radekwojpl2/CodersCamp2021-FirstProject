@@ -6,14 +6,8 @@
 }
 
 body {
-  max-width: 1200px;
-  margin: auto;
   background-color: #f5f5f5;
   color: #4e4e4e;
-}
-
-h3 {
-  margin: 0;
 }
 
 h5 {
@@ -42,7 +36,7 @@ main {
 }
 
 .list-ingredients__container--add-button {
-  padding: 0.17rem 0.55rem;
+  padding: 0.19rem 0.55rem;
   margin-left: 0.7rem;
   border: none;
   border-radius: 5px;
@@ -93,6 +87,9 @@ main {
   min-width: 24rem;
 }
 
+.recipe-search__header {
+}
+
 .recipe-search__input {
   min-width: 16rem;
   background: #ffffff;
@@ -115,6 +112,8 @@ main {
   color: #4e4e4e;
   opacity: 70%;
   text-align: center;
+  margin: 1rem 0 0.5rem;
+  width: 75%;
 }
 
 .shopping-list {
@@ -174,7 +173,7 @@ main {
 }
 
 .shopping-list__remove-button {
-  padding: 0.16rem 0.57rem;
+  padding: 0.18rem 0.57rem;
   margin-right: 0.5rem;
   border: none;
   border-radius: 5px;
