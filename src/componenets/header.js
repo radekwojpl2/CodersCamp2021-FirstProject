@@ -8,11 +8,11 @@ class foodAppHeader extends HTMLElement {
         href: 'index.html',
         active: this.checkPathname('index.html'),
       },
-      // {
-      //   name: 'SHOPPING LIST',
-      //   href: 'shoppingList.html',
-      //   active: this.checkPathname('shoppingList.html'),
-      // },
+      {
+        name: 'SHOPPING LIST',
+        href: 'shoppingListView.html',
+        active: this.checkPathname('shoppingListView.html'),
+      },
       {
         name: 'WINE',
         href: 'wineView.html',
