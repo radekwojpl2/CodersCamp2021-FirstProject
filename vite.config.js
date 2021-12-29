@@ -7,6 +7,7 @@ module.exports = defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         wineView: resolve(__dirname, 'wineView.html'),
+        shoppingListView: resolve(__dirname, 'shoppingListView.html'),
       },
     },
   },
