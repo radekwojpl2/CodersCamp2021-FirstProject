@@ -1,4 +1,9 @@
 /* ROOT ELEMENTS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -77,9 +82,9 @@ a.nav-link:hover {
   margin-top: 50px;
 }
 
-select .news-options {
-  width: 200px;
-  padding: 20px;
+select.news-options {
+  width: 250px;
+  padding: 10px;
 }
 
 /* MAIN PAGE NEWS */
@@ -135,4 +140,22 @@ select .news-options {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* MOBILE STYLES FOR NEWS */
+@media only screen and (max-width: 610px) {
+  .news-item {
+    flex-direction: column;
+    min-width: 300px;
+    margin: 20px 10px;
+  }
+
+  .news-item .info-container {
+    min-width: 95%;
+  }
+
+  .news-item img {
+    width: 100%;
+    height: auto;
+  }
 }
