@@ -17,7 +17,7 @@ h3 {
 }
 
 h5 {
-  padding-left: 10px;
+  padding-left: 0.7rem;
   margin: 1rem 0 0.6rem;
 }
 
@@ -36,14 +36,14 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
+  font-size: 1rem;
   word-break: break-all;
   cursor: default;
 }
 
 .list-ingredients__container--add-button {
   padding: 0.17rem 0.55rem;
-  margin-left: 12px;
+  margin-left: 0.7rem;
   border: none;
   border-radius: 5px;
   background: rgb(255, 255, 255);
@@ -51,7 +51,7 @@ main {
   box-shadow: 0.3px 0.3px 3px #a0a0a0, -0.3px -0.3px 4px #f8f8f8;
   font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 .list-recipies__container {
@@ -82,6 +82,41 @@ main {
   display: none;
 }
 
+.recipe-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  background: #f5f5f5;
+  font-size: 2.5rem;
+  min-width: 24rem;
+}
+
+.recipe-search__input {
+  min-width: 16rem;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: inset 9.91px 9.91px 13px #d6d6d6, inset -9.91px -9.91px 13px #fcfcfc;
+  border: none;
+  min-height: 2rem;
+  outline-color: rgb(129, 129, 129);
+  padding-left: 0.5rem;
+  overflow: hidden;
+}
+
+.recipe-search--input::placeholder {
+  padding: 0.5rem;
+  color: #9c9c9c;
+}
+
+.recipe-search__paragraph {
+  font-size: 1rem;
+  color: #4e4e4e;
+  opacity: 70%;
+  text-align: center;
+}
+
 .shopping-list {
   margin-top: 5rem;
   min-width: 32rem;
@@ -92,13 +127,18 @@ main {
   box-shadow: 24.62px 24.62px 20px #cecece, -24.62px -24.62px 20px #ffffff;
 }
 
+.shopping-list__aisle-name {
+  color: rgb(138, 138, 138);
+  font-size: 0.8rem;
+}
+
 .shopping-list__header {
-  font-size: 28px;
+  font-size: 1.6rem;
   text-align: center;
 }
 
 .shopping-list__ingredients-container {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   margin-top: 1.5rem;
 }
@@ -111,9 +151,21 @@ main {
   padding: 0.5rem 0;
 }
 
+.shopping-list__ingredient-name {
+  font-weight: 600;
+}
+
+.shopping-list__ingredient--text-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .shopping-list__paragraph {
   margin-top: 1.5rem;
-  font-size: 16px;
+  font-size: 1rem;
   opacity: 80%;
 }
 
@@ -131,40 +183,19 @@ main {
   box-shadow: 0.3px 0.3px 3px #a0a0a0, -0.3px -0.3px 4px #f8f8f8;
   font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
-.recipe-search {
+.shopping-list__total-cost {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 3rem;
-  border-radius: 16px;
-  background: #f5f5f5;
-  font-size: 40px;
-  min-width: 24rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  text-align: end;
 }
 
-.recipe-search__input {
-  min-width: 16rem;
-  background: #ffffff;
-  border-radius: 5px;
-  box-shadow: inset 9.91px 9.91px 13px #d6d6d6, inset -9.91px -9.91px 13px #fcfcfc;
-  border: none;
-  min-height: 2rem;
-  outline-color: rgb(129, 129, 129);
-  padding-left: 6px;
-  overflow: hidden;
-}
-
-.recipe-search--input::placeholder {
-  padding: 5px;
-  color: #9c9c9c;
-}
-
-.recipe-search__paragraph {
-  font-size: 16px;
-  color: #4e4e4e;
-  opacity: 70%;
-  text-align: center;
+.shopping-list__total-cost--modifier {
+  display: block;
+  border-top: 1px solid rgb(216, 216, 216);
+  padding-top: 0.7rem;
+  width: 40%;
 }

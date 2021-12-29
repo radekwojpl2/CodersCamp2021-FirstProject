@@ -10,8 +10,8 @@ class foodAppHeader extends HTMLElement {
       },
       // {
       //   name: 'SHOPPING LIST',
-      //   href: 'shoppingList.html',
-      //   active: this.checkPathname('shoppingList.html'),
+      //   href: 'src/shopping-list/index.html',
+      //   active: this.checkPathname('src/shopping-list/index.html'),
       // },
       // {
       //   name: 'WINE',
