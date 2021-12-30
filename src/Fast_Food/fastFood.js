@@ -1,7 +1,7 @@
 import getApi from './getApi.js';
 import makeElementWithClass from './createElements.js';
 
-const apiKey = 'd64418229d904d0c960feba931308605';
+const apiKey = 'b51b95c93a154a4c9c7d6bc73c618c5f';
 const divTarget = document.getElementById('menus');
 const searchButton = document.getElementById('search');
 

@@ -4,17 +4,6 @@
 html{
   font-size: 16px;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 0px;
-}
-main{
-  background-color: rgb(225, 225, 225);
-}
 #menu-search, #menu-amount{
   margin: 1rem;
 }
@@ -29,6 +18,7 @@ main{
 .menu-element {
   background-color: white;
   border: 1px solid black;
+  border-radius: 10px;
   height: 50rem;
   width: 33%;
   margin-right: .15rem;

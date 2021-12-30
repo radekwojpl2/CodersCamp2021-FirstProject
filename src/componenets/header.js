@@ -23,11 +23,11 @@ class foodAppHeader extends HTMLElement {
       //   href: 'page.html',
       //   active: this.checkPathname('p.html'),
       // },
-      // {
-      //   name: 'FAST FOOD',
-      //   href: 'page.html',
-      //   active: this.checkPathname('p.html'),
-      // },
+       {
+         name: 'FAST FOOD',
+         href: 'fastFood.html',
+         active: this.checkPathname('fastFood.html'),
+       },
     ];
   }
 
