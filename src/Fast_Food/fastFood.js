@@ -39,7 +39,7 @@ const createMenuItems = (element) => {
   restaurantName.textContent = `Restaurant : ${itemRestaurant}`;
 
   const imageSrc = element.image;
-  imgElement.setAttribute('style', `background-image: url("${imageSrc}"), url(/src/Fast_Food/noImg.png)`);
+  imgElement.setAttribute('style', `background-image: url("${imageSrc}"), url(/CodersCamp2021-FirstProject/src/Fast_Food/noImg.png)`);
 
   divTarget.appendChild(menuElement);
   menuElement.appendChild(imgElement);
