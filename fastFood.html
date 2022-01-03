@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/Fast_Food/fastFood.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Fast Food</title>
+</head>
+
+<body>
+  <div id="app">
+    <component-header></component-header>
+    <main>
+      <section id="inputs">
+        Search menu by name:
+        <input id="menu-search" type="text" placeholder="e.g. burger, wrap "> <br />
+        Type how many menu's you wan't to see:
+        <input id="menu-amount" type="number" min="1" max="20" value="6">
+        <button id="search">Search</button>
+      </section>
+      <section id="menus">
+      </section>
+    </main>
+  </div>
+  <script type="module" src="./src/Fast_Food/fastFood.js"></script>
+  <script type="module" src="./src/componenets/header.js"></script>
+</body>
+
+</html>
