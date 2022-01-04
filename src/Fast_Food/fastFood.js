@@ -36,7 +36,7 @@ const createMenuItems = (element) => {
   titleElement.textContent = itemTitle;
 
   const itemRestaurant = element.restaurantChain;
-  restaurantName.textContent = `Restaurant : ${itemRestaurant}`;
+  restaurantName.innerHTML = `<strong>Restaurant</strong>: ${itemRestaurant}`;
 
   const imageSrc = element.image;
   imgElement.setAttribute('style', `background-image: url("${imageSrc}"), url(https://i.postimg.cc/y6MpDRx6/noImg.png)`);
@@ -51,7 +51,7 @@ const createMenuItems = (element) => {
 const renderNutritionInfo = (element, menuElement) => {
   const arrayNutrition = element.nutrition.nutrients;
   const nutritionInfo = document.createElement('ul');
-  nutritionInfo.innerHTML = '<b>Nutrients:</b> <br><br>';
+  nutritionInfo.innerHTML = '<b class="menu-nutrition-title">Nutrients:</b>';
   arrayNutrition.forEach((ingredient) => {
     const nutritionName = ingredient.name;
     const nutritionAmount = ingredient.amount;

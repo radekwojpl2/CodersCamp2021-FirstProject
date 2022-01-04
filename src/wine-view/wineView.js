@@ -76,7 +76,9 @@ function displayWine(wines, pairings) {
     wineEl.classList.add('wine');
     wineEl.innerHTML = `
       <p class="wine-rating">${'★'.repeat(rating)}</p>
+      <div class="wine__img--container">
       <img class="wine-img" src="${wine.imageUrl}" alt="">
+      </div>
       <div class="wine-info">
         <h2 class="wine-name">${wine.title}</h2>
 

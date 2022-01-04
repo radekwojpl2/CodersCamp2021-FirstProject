@@ -40,6 +40,7 @@ class foodAppHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <header class="nav-header">
+    <img src="https://i.postimg.cc/CLjT73wQ/cook-logo.png" alt="fork and spoon logo" class="header__logo">
       <nav class="nav-bar">
         <ul class="nav-list">
           ${this.links

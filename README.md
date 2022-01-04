@@ -63,3 +63,10 @@ The goal was to be create main page view with a menu allowing for navigation thr
 ### Fast Food view
 
 The objective was to create a page which allows the user to choose a dish or menu from popular chain restaurants. On the page user can see sample menus, then the user can type what menu is he looking for and also select how many suggestions will be displayed. In addition, each menu is given its nutrient content to help the user picking a specific menu.
+
+### Subpage / Shopping List
+
+Accessible from the navigation panel under the name **SHOPPING LIST**.
+The idea was to create a subpage with an application, which allows users to form a shopping list with ingredients, based on the recipes, that can be searched using the search bar. An additional feature is the display of the average price for each ingredient and the total cost below the entire list.
+
+![Shopping List screenshot](https://i.postimg.cc/W4XGjHSp/shopping-list-ss.png)
