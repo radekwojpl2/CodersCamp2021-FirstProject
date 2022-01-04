@@ -1,57 +1,83 @@
-*{
+* {
   box-sizing: border-box;
 }
-html{
-  font-size: 16px;
+
+#inputs {
 }
-#menu-search, #menu-amount{
+
+#search {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ffffff, #e7e7e7);
+  box-shadow: 6px 6px 12px #c7c7c7, -6px -6px 12px #ffffff;
+  border: 1px solid rgb(201, 201, 201);
+  margin-bottom: 1.5rem;
+}
+
+#menu-search,
+#menu-amount {
   margin: 1rem;
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 9.91px 9.91px 13px #d6d6d6, inset -9.91px -9.91px 13px #fcfcfc;
+  box-shadow: inset 9.91px 9.91px 13px #d6d6d6, inset -9.91px -9.91px 13px #fcfcfc;
+  border: none;
+  height: 1.8rem;
+  padding-left: 0.5rem;
 }
+
 #menus {
-  width: 75%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-} 
-.menu-element {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  height: 50rem;
-  width: 33%;
-  margin-right: .15rem;
-  margin-bottom: .15rem;
+  grid-gap: 1.2rem;
 }
-.menu-element-title{
+.menu-element {
+  border-radius: 16px;
+  background: #f5f5f5;
+  box-shadow: 28px 28px 56px #989898, -28px -28px 56px #ffffff;
+  height: 50rem;
+  width: 30%;
+  margin-right: 0.15rem;
+  margin-bottom: 0.15rem;
+  padding: 0 1.3rem;
+}
+.menu-element-title {
+  font-weight: 800;
   font-size: 1.5rem;
-  padding: .6rem .6rem;
-  text-align:center;
-}  
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
 .menu-element-restaurant {
-  font-size: 1.5rem;
-  padding-bottom: 1.2rem;
+  font-size: 1.1rem;
+  padding-bottom: 1.5rem;
   text-align: center;
 }
 .menu-element-image {
   background-repeat: no-repeat;
   background-position: center center;
   height: 35%;
-  width: 95%; 
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
+
+.menu-nutrition-title {
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
 ul {
   list-style: none;
-  font-size: .9rem;
+  line-height: 1.3rem;
 }
-@media (max-width: 1199px){
-#menus {
+@media (max-width: 1199px) {
+  #menus {
     flex-direction: column;
     flex-wrap: nowrap;
-}
-.menu-element{
-  width: 100%;
-}
+  }
+  .menu-element {
+    width: 100%;
+  }
 }
