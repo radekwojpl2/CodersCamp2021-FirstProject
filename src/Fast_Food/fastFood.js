@@ -1,7 +1,7 @@
 import getApi from './getApi.js';
 import makeElementWithClass from './createElements.js';
 
-const apiKey = 'b51b95c93a154a4c9c7d6bc73c618c5f';
+const apiKey = 'd64418229d904d0c960feba931308605';
 const divTarget = document.getElementById('menus');
 const searchButton = document.getElementById('search');
 
@@ -39,7 +39,7 @@ const createMenuItems = (element) => {
   restaurantName.innerHTML = `<strong>Restaurant</strong>: ${itemRestaurant}`;
 
   const imageSrc = element.image;
-  imgElement.setAttribute('style', `background-image: url("${imageSrc}"), url(./src/Fast_Food/noImg.png)`);
+  imgElement.setAttribute('style', `background-image: url("${imageSrc}"), url(https://i.postimg.cc/y6MpDRx6/noImg.png)`);
 
   divTarget.appendChild(menuElement);
   menuElement.appendChild(imgElement);

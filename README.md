@@ -60,6 +60,10 @@ TO BE WRITTEN
 
 The goal was to be create main page view with a menu allowing for navigation through the application. Main page was designed to display recent food related news from various sources using an REST API as a source of data. The aim was also to give user level of customization by choosing from following topics: Food, Wine, Restaurant and making this option persistent with application of local storage for user conveniance.
 
+### Fast Food view
+
+The objective was to create a page which allows the user to choose a dish or menu from popular chain restaurants. On the page user can see sample menus, then the user can type what menu is he looking for and also select how many suggestions will be displayed. In addition, each menu is given its nutrient content to help the user picking a specific menu.
+
 ### Subpage / Shopping List
 
 Accessible from the navigation panel under the name **SHOPPING LIST**.
