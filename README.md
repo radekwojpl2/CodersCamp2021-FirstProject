@@ -1,5 +1,7 @@
 # CodersCamp2021-FirstProject
 
+Food api https://spoonacular.com/food-api
+
 ## Roles
 
 Tech lead Kuba, Agata
